@@ -14,12 +14,12 @@
 </head>
 <body>
     <header class=" w-[100vw] ">
-        <nav class="h-[100px] flex justify-between items-center px-8 py-5">
+        <nav class="h-[100px] md:flex justify-between items-center px-8 py-5 ">
             <div class="left-div flex justify-center items-center gap-2">
                 <img class="w-[50px] h-[50px]" src="assets/logo.png" alt="">
                 <h1 class="text-xl font-extrabold text-[#006747]">Emergency <br>Service</h1>
             </div>
-            <div class="right div flex justify-center items-center gap-3">
+            <div class="right div flex justify-center items-center gap-3 md:my-0 my-4">
                 <div class="w-[123px] h-[52px] rounded-3xl bg-[#41ff6b1a] flex justify-between items-center py-3 px-6">
                     <p class="text-2xl">0 </p>
                     <img class="w-[30px] h-[30px]" src="assets/heart.png" alt="">
@@ -33,17 +33,17 @@
                 </div>
             </div>
         </nav>
-        <section class="banner h-[239px]  bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col items-center justify-center">
+        <section class="banner h-[239px]  bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col items-center justify-center mt-16 md:mt-0">
             <img class="w-[92 px] h-[92px]" src="assets/logo-dark.png" alt="">
             <p class="text-white text-2xl font-bold py-2">Emergency Service Directory</p>
-            <p class="text-white">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+            <p class="text-white text-center">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
         </section>
     </header>
     <main class="bg-[#f5fff6] ">
         <section class="card container w-[95%] mx-auto grid grid-cols-12 gap-6 p-10">
-            <div class=" col-span-9">
-                <div class="cards grid grid-cols-3 grid-rows-3 gap-4 ">
-                    <div class="card p-5 shadow-md bg-white">
+            <div class=" md:col-span-9 col-span-full">
+                <div class="cards grid md:grid-cols-3 md:grid-rows-3 grid-cols-1 gap-4 ">
+                    <div class="card p-5 shadow-md bg-white ">
                         <div class="flex justify-between items-center text-2xl">
                             <div class=" bg-[#ffe3e2] rounded-lg p-2" >
                                 <img class="w-[32px] h-[32px]" src="assets/emergency.png" alt="">
@@ -186,7 +186,7 @@
                     <div class="card shadow-md p-5  bg-white">
                         <div class="flex justify-between items-center text-2xl">
                             <div class=" bg-[#ffe3e2] rounded-lg p-2" >
-                                <img class="w-[32px] h-[32px]" src="assets/emergency.png" alt="">
+                                <img class="w-[32px] h-[32px]" src="assets/brac.png" alt="">
                             </div>
                                 <i class=" fa-regular fa-heart"></i>
                         </div>
@@ -206,7 +206,7 @@
                     <div class="card shadow-md p-5  bg-white">
                         <div class="flex justify-between items-center text-2xl">
                             <div class=" bg-[#ffe3e2] rounded-lg p-2" >
-                                <img class="w-[32px] h-[32px]" src="assets/emergency.png" alt="">
+                                <img class="w-[32px] h-[32px]" src="assets/Bangladesh-Railway.png" alt="">
                             </div>
                                 <i class=" fa-regular fa-heart"></i>
                         </div>
@@ -225,7 +225,7 @@
                     </div>  
                 </div>
             </div>
-            <div class=" col-span-3 row-span-1 bg-white p-5">
+            <div class=" md:col-span-3 col-span-full row-span-1 bg-white p-5">
                 <div class="flex justify-between items-center">
                     <p class="text-xl font-bold"><i class="fa-solid fa-clock mr-2"></i>Call History</p>
                     <button class="btn w-[90px] h-[36px] rounded-xl bg-[#00a63e] text-white"> Clear</button>
@@ -242,5 +242,6 @@
             </div>
         </section>
     </main>
+    
 </body>
 </html>
