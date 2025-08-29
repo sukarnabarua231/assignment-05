@@ -18,15 +18,42 @@ let coin = 100;
 for(let btn of callButton){
     btn.addEventListener('click',function(e){
         e.preventDefault();
-        const cardTitle = btn.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
-        const cardNumber = btn.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
+        let cardTitle = btn.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
+        let cardNumber = btn.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
         if(coinCount < 20){
             alert("You Don't Have Enough Coin to Make a Call")
             return
         }
         coinCount = coinCount-20;
         document.getElementById('coin-count').innerText = coinCount;
+        alert("📞 Calling " + cardTitle +"  " + cardNumber)
+
+
+        const callHistoryData = [];
+        const data = {name:"card title",Numb:"cardNumber",time:new Date().toLocaleTimeString() };
+        callHistoryData.push(data);
+
+        let cardContainer = document.getElementById("card-container")
+        const NewCallHistory = document.createElement("div")
+        NewCallHistory.innerHTML=` <div class="cart-box flex justify-between bg-[#fafafa] items-center p-3 rounded-lg my-3 gap-2"> 
+                    <div>
+                        <h1 class="font-semibold">${cardTitle}</h1>
+                        <p>${cardNumber}</p>
+                    </div>
+                    <div>
+                        <h1>${data.time}</h1>
+                    </div>
+                </div>`;
+                cardContainer.append(NewCallHistory)
+        
     })
+    const clearCallHistory = document.getElementById('clear-btn');
+    clearCallHistory.addEventListener("click",function(e){
+        e.preventDefault();
+        let cardContainer = document.getElementById("card-container");
+        cardContainer.innerHTML = " "
+    })
+    
 }
 
 // for national emergency card
