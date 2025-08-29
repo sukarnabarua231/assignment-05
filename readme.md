@@ -1,5 +1,5 @@
 
-### 1.
+### 1.What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
 Answer:
@@ -32,9 +32,8 @@ It’s useful because it saves memory and works for dynamically added elements.
 ---
 
 ## 5.What is the difference between preventDefault() and stopPropagation() methods?
-Answer:preventDefault() stops the browser’s default action for an event (e.g., following a link, submitting a form).
-stopPropagation() stops the event from bubbling or capturing up/down the DOM, preventing parent handlers from firing.
+
+Answer:preventDefault() stops the browser’s default action for an event (e.g., following a link, submitting a form). stopPropagation() stops the event from bubbling or capturing up/down the DOM, preventing parent handlers from firing.
+
 ---
-
-
 
