@@ -1,4 +1,5 @@
-// function for heart increase
+// function for heart increase-------------------------
+
  const heartCount = document.getElementById('heart-count');
  const heartIcon = document.getElementsByClassName('heart')
  for(const hearts of heartIcon){
@@ -11,7 +12,8 @@
  }
 
 
-// function for call fucntionality
+// function for call fucntionality-------------------------
+
 let coinCount = parseInt(document.getElementById('coin-count').innerText);
 const callButton = document.getElementsByClassName('call-btn')
 let coin = 100;
@@ -56,21 +58,27 @@ for(let btn of callButton){
     
 }
 
-// for national emergency card
+//for copy button---------------
 
+const copyBtn = document.getElementsByClassName("copy-btn");
 
-// for police helpline card
+for(const btn of copyBtn){
+    btn.addEventListener('click',function(e){
+        e.preventDefault(e);
+        let copyCountStr = document.getElementById('copy-count');
+        let copyCount = parseInt(copyCountStr.innerText);
+        copyCount++;
+        copyCountStr.innerText = copyCount;
+        
+        let hotLineNumber = btn.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
+        console.log(hotLineNumber);
 
-// for fire service
-
-// for ambulance service card
-
-// for women child helpline card
-
-// for anti-corruption-card
-
-// for electricity-helpline-card
-
-// for brac-helpline-card
-
-// for railway-helpline-card
+         navigator.clipboard.writeText(hotLineNumber).then(() => {
+      alert(`Number ${hotLineNumber} copied to clipboard!`);
+     }) .catch(err => {
+            console.error('Failed to copy: ', err);
+        })
+    
+        
+    })
+}
